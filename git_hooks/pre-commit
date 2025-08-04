@@ -1,0 +1,3 @@
+# git_hooks/pre-commit
+#!/bin/sh
+python main.py analyze HEAD
