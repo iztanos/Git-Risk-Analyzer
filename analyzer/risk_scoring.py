@@ -2,7 +2,7 @@ import re
 from analyzer.tokenizer import tokenize
 
 def score_diff(diff: str):
-    print("\n[DEBUG] Diff content received for scoring:\n", diff, "\n")  # Add this debug line
+    #print("\n[DEBUG] Diff content received for scoring:\n", diff, "\n")  # Add this debug line
 
     score = {"risk_level": "Low", "issues": []}
 

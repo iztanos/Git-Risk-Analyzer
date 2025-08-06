@@ -7,7 +7,7 @@ A Python tool that analyzes Git commits for security risks and potential issues 
 - **Git Diff Analysis**: Extracts and analyzes changes from specific commits
 - **Risk Scoring**: Identifies potential security issues like exposed API keys, secrets, and large changes
 - **AI-Powered Analysis**: Uses OpenAI GPT-3.5-turbo for detailed security risk explanations
-- **Rich Output**: Beautiful console output with color-coded risk levels
+- **Rich Output**: Console output with color-coded risk levels
 
 ## Installation
 
@@ -30,22 +30,30 @@ cp .env.example .env
 
 ## Usage
 
-Analyze a specific commit:
+To analyze a specific commit, run:
 ```bash
 python main.py <commit-hash>
 ```
 
-Example:
+To run the test suite, which simulates various risk scenarios, execute:
 ```bash
-python main.py HEAD
-python main.py abc123f
+python run_all_tests.py
 ```
+This will provide a summary of how the tool evaluates low, medium, and high risk commits.
 
 ## Risk Levels
 
 - **Low**: No significant issues detected
 - **Medium**: Large changes or moderate concerns
 - **High**: Sensitive information detected (API keys, secrets, etc.)
+
+## Testing
+
+This project includes a set of tests to ensure the risk analysis is working correctly. To run the tests, simply execute:
+```bash
+python run_all_tests.py
+```
+The test runner will simulate different types of commits (low, medium, and high risk) and display the analysis for each.
 
 ## Configuration
 
