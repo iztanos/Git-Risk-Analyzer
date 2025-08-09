@@ -6,13 +6,27 @@ A Python tool that analyzes Git commits for security risks and potential issues 
 
 - **Git Diff Analysis**: Extracts and analyzes changes from specific commits
 - **Risk Scoring**: Identifies potential security issues like exposed API keys, secrets, and large changes
-- **AI-Powered Analysis**: Uses OpenAI GPT-3.5-turbo for detailed security risk explanations
+- **AI-Powered Analysis**: Uses OpenAI for detailed security risk explanations
 - **Rich Output**: Console output with color-coded risk levels
 
-<video width="320" height="240" controls loop>
-  <source src="Github_Risk_Analyzer.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+
+
+https://github.com/user-attachments/assets/c35d7ff5-d9b4-440a-aea6-91df3d755bcc
+
+Example - Changes in the `.env` file
+
+<img width="2032" height="212" alt="CritExmaple" src="https://github.com/user-attachments/assets/a202f9c9-ad7b-429d-a284-094a65a641ef" />
+
+
+
+
+
+
+
+
+
+
 
 ## Installation
 
