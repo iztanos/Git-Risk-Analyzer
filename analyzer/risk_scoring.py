@@ -1,6 +1,10 @@
 import re
 from analyzer.tokenizer import tokenize
 
+import re
+from analyzer.tokenizer import tokenize
+from analyzer.ai_model import explain_diff
+
 def score_diff(diff: str):
     #print("\n[DEBUG] Diff content received for scoring:\n", diff, "\n")  # Add this debug line
 
@@ -16,5 +20,10 @@ def score_diff(diff: str):
             score["risk_level"] = "Medium"
         score["issues"].append("Large diff detected")
 
-    return score
+    # Call AI model for additional explanation only if not already explained
+    if not any("AI explanation" in issue for issue in score["issues"]):
+        ai_explanation = explain_diff(diff)
+        if ai_explanation:
+            score["issues"].append(ai_explanation)
 
+    return score

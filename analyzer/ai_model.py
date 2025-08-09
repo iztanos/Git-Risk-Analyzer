@@ -15,7 +15,7 @@ def explain_diff(diff: str) -> str:
 
     prompt = (
         "You are a security-aware code reviewer. "
-        "Analyze this git diff and describe any security or risk issues:\n\n"
+        "Analyze this git diff and describe any security or risk issues in detail:\n\n"
         f"{diff}\n\n"
         "Explain the risks clearly and concisely."
     )
@@ -33,4 +33,7 @@ def explain_diff(diff: str) -> str:
         explanation = response.choices[0].message.content.strip()
         return explanation
     except Exception as e:
+        error_message = str(e)
+        if "insufficient_quota" in error_message:
+            return "AI explanation error: Quota exceeded. Please check your plan and billing details."
         return f"AI explanation error: {e}"

@@ -9,6 +9,11 @@ A Python tool that analyzes Git commits for security risks and potential issues 
 - **AI-Powered Analysis**: Uses OpenAI GPT-3.5-turbo for detailed security risk explanations
 - **Rich Output**: Console output with color-coded risk levels
 
+<video width="320" height="240" controls loop>
+  <source src="Github_Risk_Analyzer.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Installation
 
 1. Clone the repository:
@@ -60,29 +65,7 @@ The test runner will simulate different types of commits (low, medium, and high 
 The tool looks for the following environment variables in `.env`:
 - `OPENAI_API_KEY`: Your OpenAI API key for AI-powered analysis (optional)
 
-## Project Structure
 
-```
-├── main.py                 # Entry point
-├── analyzer/
-│   ├── cli.py             # Command-line interface
-│   ├── diff_extractor.py  # Git diff extraction
-│   ├── risk_scoring.py    # Risk analysis logic
-│   ├── output_renderer.py # Console output formatting
-│   ├── ai_model.py        # OpenAI integration
-│   ├── tokenizer.py       # Text tokenization
-│   └── utils.py           # Utility functions
-├── requirements.txt       # Python dependencies
-└── .env                  # Environment variables
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ## License
 

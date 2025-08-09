@@ -13,5 +13,9 @@ def render_report(report: dict):
     }.get(level, "green")
 
     console.print(f"\n[bold {color}]Risk Level: {level}[/bold {color}]")
+    # Display issues
     for issue in issues:
-        console.print(f"- [bold]{issue}[/bold]")
+        if "AI explanation" in issue:
+            console.print(f"\n[bold blue]AI Explanation:[/bold blue]\n{issue}")
+        else:
+            console.print(f"- [bold]{issue}[/bold]")
